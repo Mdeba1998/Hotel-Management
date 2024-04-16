@@ -23,7 +23,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 	<div class="container">
-		<h5 style="color: white;">HOSTEL WORLD</h5>
+		<h5 style="color: white;">HOTEL WORLD</h5>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarNav" aria-controls="navbarNav"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -45,6 +45,9 @@
 
 				<li class="nav-item"><a class="nav-link active"
 					aria-current="page" href="aboutus.jsp">About Us</a></li>
+
+				<li class="nav-item"><a class="nav-link active"
+					aria-current="page" href="contactUs.jsp">Contact Us</a></li>
 
 				<li class="nav-item"><a class="nav-link active"
 					aria-current="page" href="LogoutServlet">Logout</a></li>

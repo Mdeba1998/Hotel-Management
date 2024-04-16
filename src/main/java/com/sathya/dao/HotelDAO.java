@@ -10,8 +10,9 @@ import java.util.List;
 
 import com.sathya.connection.DbConnection;
 import com.sathya.entity.BookingDetails;
+import com.sathya.entity.Contact;
 
-public class HostelDAO {
+public class HotelDAO {
 
 	public int getAvailableRooms(String type) {
 		int count = 0;
@@ -83,6 +84,24 @@ public class HostelDAO {
 		else
 			rent = 300;
 		return rent;
+	}
+
+	public int saveContact(Contact contact) {
+		int result = 0;
+		try (Connection connection = DbConnection.createConnection();
+				PreparedStatement preparedStatement = connection
+						.prepareStatement("insert into contact_details values(?,?,?,?)");) {
+
+			preparedStatement.setString(1, contact.getUsername());
+			preparedStatement.setString(2, contact.getName());
+			preparedStatement.setLong(3, contact.getMobile());
+			preparedStatement.setString(4, contact.getComments());
+			result = preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 }

@@ -1,5 +1,5 @@
 <%@page import="java.time.LocalDate"%>
-<%@page import="com.sathya.dao.HostelDAO"%>
+<%@page import="com.sathya.dao.HotelDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -24,8 +24,8 @@
 			<div class="form-group">
 				<%
 				String username = (String) session.getAttribute("username");
-				System.out.println("username: " + username);
-				String roomType = request.getParameter("type");
+						System.out.println("username: " + username);
+						String roomType = request.getParameter("type");
 				%>
 				<label>User Name:</label> <input type="text" name="userName"
 					id="userName" class="form-control" value="${username}" readonly>
@@ -37,12 +37,12 @@
 			<div class="form-group">
 				<label>Available Rooms:</label> <input type="number"
 					name="availableRooms" id="availableRooms" class="form-control"
-					value=<%=new HostelDAO().getAvailableRooms(roomType)%> readonly>
+					value=<%=new HotelDAO().getAvailableRooms(roomType)%> readonly>
 			</div>
 			<div class="form-group">
 				<label>Price per Day:</label> <input type="number"
 					name="pricePerDay" id="pricePerDay" class="form-control"
-					value="<%=new HostelDAO().rentPerDay(roomType)%>" readonly>
+					value="<%=new HotelDAO().rentPerDay(roomType)%>" readonly>
 			</div>
 
 			<div class="form-group">

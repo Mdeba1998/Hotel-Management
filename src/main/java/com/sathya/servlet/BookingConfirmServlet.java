@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.sathya.dao.HostelDAO;
+import com.sathya.dao.HotelDAO;
 import com.sathya.dao.UserDao;
 import com.sathya.entity.BookingDetails;
 
@@ -34,8 +34,8 @@ public class BookingConfirmServlet extends HttpServlet {
 		request.setAttribute("emailBody", emailBody);
 		request.setAttribute("emailSubject", emailSubject);
 
-		new HostelDAO().saveBookingDetails(details);
-		int bookResult = new HostelDAO().bookRoom(details.getRoomType());	
+		new HotelDAO().saveBookingDetails(details);
+		int bookResult = new HotelDAO().bookRoom(details.getRoomType());	
 		request.setAttribute("bookingStat", bookResult);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("EmailServiceServlet");

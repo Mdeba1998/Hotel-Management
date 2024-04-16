@@ -1,4 +1,5 @@
-<%@page import="com.sathya.dao.HostelDAO"%>
+
+<%@page import="com.sathya.dao.HotelDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
@@ -153,7 +154,7 @@
 			<div class="overlay">
 
 				<h2>Luxury Deluxe Room</h2>
-				<h4 style="color: lime;">Available Rooms:<%=new HostelDAO().getAvailableRooms("luxury") %></h4>
+				<h4 style="color: lime;">Available Rooms:<%=new HotelDAO().getAvailableRooms("luxury") %></h4>
 				<div>
 					<ol>
 						<li>Free Wi-Fi</li>
@@ -177,7 +178,7 @@
 			style="background-image: url('images/deluxe.jpeg');">
 			<div class="overlay">
 				<h2>Deluxe Room</h2>
-				<h4 style="color: lime;">Available Rooms:<%=new HostelDAO().getAvailableRooms("deluxe") %></h4>
+				<h4 style="color: lime;">Available Rooms:<%=new HotelDAO().getAvailableRooms("deluxe") %></h4>
 				<div>
 					<ol>
 						<li>Free Wi-Fi</li>
@@ -200,7 +201,7 @@
 			style="background-image: url('images/normal.jpeg');">
 			<div class="overlay">
 				<h2>Normal Rooms</h2>
-				<h4 style="color: lime;">Available Rooms:<%=new HostelDAO().getAvailableRooms("normal") %></h4>
+				<h4 style="color: lime;">Available Rooms:<%=new HotelDAO().getAvailableRooms("normal") %></h4>
 				<div>
 					<ol>
 						<li>Free Wi-Fi</li>
